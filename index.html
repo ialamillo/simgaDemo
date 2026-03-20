@@ -13,6 +13,11 @@
     <div class="bg-shape shape-1"></div>
     <div class="bg-shape shape-2"></div>
 
+    <!-- Global Logo Top Left -->
+    <div class="global-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Sigma_Alimentos_logotipo.png/320px-Sigma_Alimentos_logotipo.png" alt="Sigma Logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'120\' height=\'40\'><rect width=\'120\' height=\'40\' fill=\'%23d32f2f\' rx=\'4\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'white\' font-family=\'sans-serif\' font-weight=\'bold\' font-size=\'20\'>Sigma</text></svg>'">
+    </div>
+
     <main class="app-container">
         
         <!-- Login View -->
@@ -45,8 +50,7 @@
         <section id="home-view" class="view hidden">
             <header class="app-header glass-card">
                 <div class="logo-container">
-                    <!-- Placeholder image, the user will replace with actual image. Sigma Foodservice logo generally has red/yellow colors -->
-                    <img src="sigma-logo.png" alt="Sigma Logo" class="brand-logo" id="header-logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'120\' height=\'40\'><rect width=\'120\' height=\'40\' fill=\'%23d32f2f\' rx=\'4\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'white\' font-family=\'sans-serif\' font-weight=\'bold\' font-size=\'20\'>Sigma</text></svg>'">
+                    <!-- Global logo covers this area visually -->
                 </div>
                 <div class="user-profile">
                     <span class="avatar">A</span>
@@ -56,19 +60,15 @@
             </header>
             
             <div class="dashboard-content">
-                <div class="glass-card hero-card">
-                    <h2>Bienvenido al Asistente IA</h2>
-                    <p class="instruction-text">
-                        Carga tu orden de compra al asistente para que la procese con Inteligencia Artificial.
-                    </p>
-                    
-                    <div class="upload-area" id="upload-area">
-                        <div class="upload-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-                        </div>
-                        <h3>Arrastra tu archivo aquí</h3>
-                        <p>o haz clic para explorar</p>
-                        <button class="secondary-btn">Seleccionar Archivo</button>
+                <div class="glass-card widget-container">
+                    <script async src="https://cdn.simplyask.ai/widget/widget.js"></script>
+                    <div 
+                        class="simplyask-agent-widget inline-widget" 
+                        data-iva-agent-id="27eb0633-1318-4439-903a-7e91145bec4d"
+                        data-widget-id="83855e32-8cc8-4157-8906-c08c771d51eb"
+                        data-open="true"
+                        data-default-open="true"
+                        data-mode="inline" >
                     </div>
                 </div>
             </div>
