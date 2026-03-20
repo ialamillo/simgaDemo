@@ -1,0 +1,321 @@
+/* CSS Variables for easy theming */
+:root {
+    --primary: #d32f2f; /* Sigma Red */
+    --primary-hover: #b71c1c;
+    --accent: #fbc02d; /* Sigma Yellow */
+    --bg-dark: #0f172a;
+    --bg-light: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --error: #ef4444;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background decoration */
+.bg-shape {
+    position: absolute;
+    filter: blur(80px);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.shape-1 {
+    width: 40vw;
+    height: 40vw;
+    background: rgba(211, 47, 47, 0.15); /* Light red */
+    top: -10vw;
+    left: -10vw;
+}
+
+.shape-2 {
+    width: 30vw;
+    height: 30vw;
+    background: rgba(251, 192, 45, 0.15); /* Light yellow */
+    bottom: -5vw;
+    right: -5vw;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.view {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.view.active {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glassmorphism utility */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 24px;
+}
+
+/* Login Card Styles */
+#login-view {
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 48px 40px;
+}
+
+.brand {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.brand-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -1px;
+}
+
+.brand-subtitle {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.input-group input {
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.9);
+    font-family: inherit;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+}
+
+.error-message {
+    color: var(--error);
+    font-size: 14px;
+    text-align: center;
+    display: none;
+    background: rgba(239, 68, 68, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Buttons */
+.primary-btn {
+    background-color: var(--primary);
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+}
+
+.secondary-btn {
+    background-color: white;
+    color: var(--text-main);
+    padding: 12px 24px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+    background-color: #f8fafc;
+    border-color: #e2e8f0;
+}
+
+.text-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.text-btn:hover {
+    color: var(--primary);
+}
+
+/* Home View Layout */
+#home-view {
+    min-height: 90vh;
+    gap: 32px;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    margin-top: 20px;
+}
+
+.brand-logo {
+    height: 40px;
+    object-fit: contain;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.greeting {
+    font-weight: 500;
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .greeting {
+        display: block;
+    }
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-card {
+    width: 100%;
+    max-width: 800px;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.hero-card h2 {
+    font-size: 32px;
+    color: var(--text-main);
+    margin-bottom: 16px;
+}
+
+.instruction-text {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.upload-area {
+    border: 2px dashed rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 60px 20px;
+    background: rgba(255,255,255,0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.upload-area:hover {
+    border-color: var(--primary);
+    background: rgba(211, 47, 47, 0.02);
+}
+
+.upload-icon {
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.upload-area h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.upload-area p {
+    color: var(--text-muted);
+    font-size: 14px;
+}

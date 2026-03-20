@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma - Portal Interno</title>
+    <!-- Modern Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background overlay elements for modern glassmorphism effect -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <main class="app-container">
+        
+        <!-- Login View -->
+        <section id="login-view" class="view active">
+            <div class="glass-card login-card">
+                <div class="brand">
+                    <h1 class="brand-title">Sigma</h1>
+                    <p class="brand-subtitle">Portal de Acceso</p>
+                </div>
+                
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="username">Usuario</label>
+                        <input type="text" id="username" placeholder="Ingresa tu usuario" required autocomplete="username">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" placeholder="Ingresa tu contraseña" required autocomplete="current-password">
+                    </div>
+                    
+                    <div id="error-message" class="error-message">Credenciales incorrectas</div>
+                    
+                    <button type="submit" class="primary-btn">Iniciar Sesión</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Home View -->
+        <section id="home-view" class="view hidden">
+            <header class="app-header glass-card">
+                <div class="logo-container">
+                    <!-- Placeholder image, the user will replace with actual image. Sigma Foodservice logo generally has red/yellow colors -->
+                    <img src="sigma-logo.png" alt="Sigma Logo" class="brand-logo" id="header-logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'120\' height=\'40\'><rect width=\'120\' height=\'40\' fill=\'%23d32f2f\' rx=\'4\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'white\' font-family=\'sans-serif\' font-weight=\'bold\' font-size=\'20\'>Sigma</text></svg>'">
+                </div>
+                <div class="user-profile">
+                    <span class="avatar">A</span>
+                    <span class="greeting">Hola, Admin</span>
+                    <button id="logout-btn" class="text-btn">Salir</button>
+                </div>
+            </header>
+            
+            <div class="dashboard-content">
+                <div class="glass-card hero-card">
+                    <h2>Bienvenido al Asistente IA</h2>
+                    <p class="instruction-text">
+                        Carga tu orden de compra al asistente para que la procese con Inteligencia Artificial.
+                    </p>
+                    
+                    <div class="upload-area" id="upload-area">
+                        <div class="upload-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                        </div>
+                        <h3>Arrastra tu archivo aquí</h3>
+                        <p>o haz clic para explorar</p>
+                        <button class="secondary-btn">Seleccionar Archivo</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
