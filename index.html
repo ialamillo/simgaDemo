@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <script async src="https://cdn.simplyask.ai/widget/widget.js"></script>
     <!-- Background overlay elements for modern glassmorphism effect -->
     <div class="bg-shape shape-1"></div>
     <div class="bg-shape shape-2"></div>
@@ -16,7 +19,7 @@
     <!-- Removed Global Logo per request -->
 
     <main class="app-container">
-        
+
         <!-- Login View -->
         <section id="login-view" class="view active">
             <div class="glass-card login-card">
@@ -24,20 +27,22 @@
                     <h1 class="brand-title">Sigma</h1>
                     <p class="brand-subtitle">Portal de Acceso</p>
                 </div>
-                
+
                 <form id="login-form">
                     <div class="input-group">
                         <label for="username">Usuario</label>
-                        <input type="text" id="username" placeholder="Ingresa tu usuario" required autocomplete="username">
+                        <input type="text" id="username" placeholder="Ingresa tu usuario" required
+                            autocomplete="username">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="password">Contraseña</label>
-                        <input type="password" id="password" placeholder="Ingresa tu contraseña" required autocomplete="current-password">
+                        <input type="password" id="password" placeholder="Ingresa tu contraseña" required
+                            autocomplete="current-password">
                     </div>
-                    
+
                     <div id="error-message" class="error-message">Credenciales incorrectas</div>
-                    
+
                     <button type="submit" class="primary-btn">Iniciar Sesión</button>
                 </form>
             </div>
@@ -47,7 +52,9 @@
         <section id="home-view" class="view hidden">
             <header class="app-header glass-card">
                 <div class="logo-container">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Sigma_Alimentos_logotipo.png/320px-Sigma_Alimentos_logotipo.png" alt="Sigma Logo" class="brand-logo" id="header-logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'120\' height=\'40\'><rect width=\'120\' height=\'40\' fill=\'%23d32f2f\' rx=\'4\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'white\' font-family=\'sans-serif\' font-weight=\'bold\' font-size=\'20\'>Sigma</text></svg>'">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Sigma_Alimentos_logotipo.png/320px-Sigma_Alimentos_logotipo.png"
+                        alt="Sigma Logo" class="brand-logo" id="header-logo"
+                        onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'120\' height=\'40\'><rect width=\'120\' height=\'40\' fill=\'%23d32f2f\' rx=\'4\'/><text x=\'50%\' y=\'50%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'white\' font-family=\'sans-serif\' font-weight=\'bold\' font-size=\'20\'>Sigma</text></svg>'">
                 </div>
                 <div class="user-profile">
                     <span class="avatar">A</span>
@@ -55,26 +62,19 @@
                     <button id="logout-btn" class="text-btn">Salir</button>
                 </div>
             </header>
-            
+
             <div class="dashboard-content">
                 <div class="glass-card widget-container">
-                    <script async src="https://cdn.simplyask.ai/widget/widget.js"></script>
-                    <div 
-                        class="simplyask-agent-widget inline-widget" 
-                        data-iva-agent-id="27eb0633-1318-4439-903a-7e91145bec4d"
-                        data-widget-id="83855e32-8cc8-4157-8906-c08c771d51eb"
-                        data-open="true"
-                        data-default-open="true"
-                        data-mode="inline"
-                        data-display="inline"
-                        data-embed="true">
+                    <div class="simplyask-agent-widget" data-iva-agent-id="a8234fa2-9129-43eb-b164-2cca6fbaac03"
+                        data-widget-id="8353a8f2-f5be-4f55-9a0d-0c7e8936a982" data-display-style="frame">
                     </div>
                 </div>
             </div>
         </section>
 
     </main>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>
