@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Expected credentials
     const VALID_USER = 'admin';
-    const VALID_PASS = 'Password12345';
+    const VALID_PASS = 'password123';
 
     // Session Persistence
     if (localStorage.getItem('sigma_session_active') === 'true') {
