@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Expected credentials
     const VALID_USER = 'admin';
-    const VALID_PASS = 'password123';
+    const VALID_PASS = 'Password12345';
 
     // Session Persistence
     if (localStorage.getItem('sigma_session_active') === 'true') {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         // Reset error message
         errorMessage.style.display = 'none';
 
@@ -34,20 +34,20 @@ document.addEventListener('DOMContentLoaded', () => {
             // Successful login animation sequence
             loginView.style.opacity = '0';
             loginView.style.transform = 'translateY(-20px)';
-            
+
             setTimeout(() => {
                 loginView.classList.remove('active');
                 loginView.style.display = 'none';
-                
+
                 homeView.style.display = 'flex';
                 // Small delay to ensure display:flex is applied before animating opacity
                 setTimeout(() => {
                     homeView.classList.add('active');
                 }, 50);
-                
+
                 // Save session
                 localStorage.setItem('sigma_session_active', 'true');
-                
+
                 // Clear form
                 loginForm.reset();
             }, 500);
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // Failed login
             errorMessage.style.display = 'block';
-            
+
             // Shake effect
             loginForm.parentElement.animate([
                 { transform: 'translateX(0)' },
@@ -78,11 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         homeView.style.opacity = '0';
         homeView.style.transform = 'translateY(20px)';
-        
+
         setTimeout(() => {
             homeView.classList.remove('active');
             homeView.style.display = 'none';
-            
+
             loginView.style.display = 'flex';
             setTimeout(() => {
                 loginView.classList.add('active');
